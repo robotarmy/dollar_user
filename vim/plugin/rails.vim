@@ -1,0 +1,1 @@
+git/vim-rails/plugin/rails.vim

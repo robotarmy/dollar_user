@@ -17,6 +17,7 @@
 $
 
 # Command Line History (newest to oldest):
+:q!
 :wq
 :w
 :qall
@@ -36,7 +37,6 @@ $
 :W
 :wi
 :qall!
-:206
 
 # Search String History (newest to oldest):
 ? toad
@@ -96,18 +96,19 @@ $
 	/
 
 # File marks:
-'0  3  0  ~/Experiment/FAYE/.git/COMMIT_EDITMSG
-'1  18  0  ~/Experiment/FAYE/fapp.js
-'2  38  2  ~/canvas.html
-'3  36  4  ~/canvas.html
-'4  2  0  ~/Experiment/MongoLedger/.git/COMMIT_EDITMSG
-'5  11  0  ~/Experiment/MongoLedger/README
-'6  48  5  ~/Downloads/PassengerPane-1.3/README.rdoc
-'7  18  0  ~/Downloads/Twilight Saga Eclipse DVDrip 2010 XviD-WBZ/Twilight Saga Eclipse.nfo
-'8  48  0  ~/Downloads/The.Eclipse.LiMiTED.DVDRip.XviD-LPD[UsaBit.com]/the.eclipse.limited.dvdrip.xvid-lpd.nfo
-'9  8  13  ~/Experiment/spike/twitter_people/NERD_tree_3
+'0  1  0  ~/.git/COMMIT_EDITMSG
+'1  3  0  ~/Experiment/FAYE/.git/COMMIT_EDITMSG
+'2  18  0  ~/Experiment/FAYE/fapp.js
+'3  38  2  ~/canvas.html
+'4  36  4  ~/canvas.html
+'5  2  0  ~/Experiment/MongoLedger/.git/COMMIT_EDITMSG
+'6  11  0  ~/Experiment/MongoLedger/README
+'7  48  5  ~/Downloads/PassengerPane-1.3/README.rdoc
+'8  18  0  ~/Downloads/Twilight Saga Eclipse DVDrip 2010 XviD-WBZ/Twilight Saga Eclipse.nfo
+'9  48  0  ~/Downloads/The.Eclipse.LiMiTED.DVDRip.XviD-LPD[UsaBit.com]/the.eclipse.limited.dvdrip.xvid-lpd.nfo
 
 # Jumplist (newest first):
+-'  1  0  ~/.git/COMMIT_EDITMSG
 -'  3  0  ~/Experiment/FAYE/.git/COMMIT_EDITMSG
 -'  1  0  ~/Experiment/FAYE/.git/COMMIT_EDITMSG
 -'  18  0  ~/Experiment/FAYE/fapp.js
@@ -205,11 +206,14 @@ $
 -'  48  5  ~/Downloads/PassengerPane-1.3/README.rdoc
 -'  1  0  ~/Downloads/PassengerPane-1.3/README.rdoc
 -'  18  0  ~/Downloads/Twilight Saga Eclipse DVDrip 2010 XviD-WBZ/Twilight Saga Eclipse.nfo
--'  1  0  ~/Downloads/Twilight Saga Eclipse DVDrip 2010 XviD-WBZ/Twilight Saga Eclipse.nfo
--'  48  0  ~/Downloads/The.Eclipse.LiMiTED.DVDRip.XviD-LPD[UsaBit.com]/the.eclipse.limited.dvdrip.xvid-lpd.nfo
--'  1  0  ~/Downloads/The.Eclipse.LiMiTED.DVDRip.XviD-LPD[UsaBit.com]/the.eclipse.limited.dvdrip.xvid-lpd.nfo
 
 # History of marks within files (newest to oldest):
+
+> ~/.git/COMMIT_EDITMSG
+	"	1	0
+	^	1	8
+	.	1	7
+	+	1	7
 
 > ~/Experiment/FAYE/.git/COMMIT_EDITMSG
 	"	3	0
@@ -4052,29 +4056,3 @@ $
 	+	13	49
 	+	14	0
 	+	11	9
-
-> ~/Experiment/fifapush/NERD_tree_4
-	"	1	0
-	^	11	21
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0

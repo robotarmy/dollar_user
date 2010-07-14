@@ -1,0 +1,1 @@
+git/vim-rails/autoload/rails.vim
