@@ -1,2 +1,2 @@
-!#/bin/sh
-wn $* -hypern
+#!/bin/sh
+wn $* -hypen
