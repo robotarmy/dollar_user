@@ -1,4 +1,5 @@
 VERSION	217
+MruFile.data	{'word': '/Users/o_o/.git/COMMIT_EDITMSG', 'time': 1279132794}
 MruFile.data	{'word': '/Users/o_o/Experiment/FAYE/.git/COMMIT_EDITMSG', 'time': 1279038992}
 MruFile.data	{'word': '/Users/o_o/Experiment/FAYE/.gitignore', 'time': 1279038943}
 MruFile.data	{'word': '/Users/o_o/Experiment/FAYE/spoot.html', 'time': 1279038903}
@@ -189,7 +190,6 @@ MruFile.data	{'word': '/Users/o_o/Script/treen', 'time': 1275945056}
 MruFile.data	{'word': '/Users/o_o/Script/hypern', 'time': 1275944631}
 MruFile.data	{'word': '/Users/o_o/Script/define', 'time': 1275944545}
 MruFile.data	{'word': '/Users/o_o/.zshrc', 'time': 1275944355}
-MruFile.data	{'word': '/Users/o_o/.git/COMMIT_EDITMSG', 'time': 1275943689}
 MruFile.data	{'word': '/Users/o_o/Experiment/MongoLedger/views/layout.html.haml', 'time': 1275887672}
 MruFile.data	{'word': '/Users/o_o/Experiment/MongoLedger/views/ledger_index.html.haml', 'time': 1275884105}
 MruFile.data	{'word': '/Users/o_o/Experiment/MongoLedger/lib/Ledger.js', 'time': 1275884046}
@@ -199,15 +199,15 @@ MruFile.data	{'word': '/Users/o_o/Experiment/node-mongodb-native/lib/mongodb/bso
 MruFile.data	{'word': '/Users/o_o/Experiment/node-mongodb-native/lib/mongodb/bson/collections.js', 'time': 1275876971}
 MruFile.data	{'word': '/Users/o_o/Experiment/node-mongodb-native/lib/mongodb/commands/query_command.js', 'time': 1275876912}
 MruFile.data	{'word': '/Users/o_o/Experiment/node-mongodb-native/lib/mongodb/bson/NERD_tree_1', 'time': 1275876904}
-MruCmd.data	{'word': ':wq', 'time': 1279038992}
-MruCmd.data	{'word': ':w', 'time': 1279038991}
+MruCmd.data	{'word': ':q!', 'time': 1279132796}
+MruCmd.data	{'word': ':wq', 'time': 1279132777}
+MruCmd.data	{'word': ':w', 'time': 1279132776}
 MruCmd.data	{'word': ':qall', 'time': 1279038980}
 MruCmd.data	{'word': ':', 'time': 1279037409}
 MruCmd.data	{'word': ':q', 'time': 1279037309}
 MruCmd.data	{'word': ':shell', 'time': 1279037267}
 MruCmd.data	{'word': ':sp', 'time': 1279037259}
 MruCmd.data	{'word': ':qall!', 'time': 1279037141}
-MruCmd.data	{'word': ':q!', 'time': 1279037138}
 MruCmd.data	{'word': ':m', 'time': 1278950676}
 MruCmd.data	{'word': ':wv', 'time': 1278950657}
 MruCmd.data	{'word': ':v', 'time': 1278950087}

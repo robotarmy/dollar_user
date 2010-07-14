@@ -1,0 +1,1 @@
+git/vim-rails/doc/rails.txt

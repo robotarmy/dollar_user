@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/o_o/Experiment/ruby_koans'
+let g:netrw_dirhist_2='/Users/o_o/Experiment/fifapush'
+let g:netrw_dirhist_3='/Users/o_o/Experiment/fifapush/lib'
+let g:netrw_dirhist_4='/Users/o_o/Experiment/fifapush'
+let g:netrw_dirhist_5='/Users/o_o/Experiment/MongoLedger'
+let g:netrw_dirhist_6='/Users/o_o/Work/ListoriousTwitter'
+let g:netrw_dirhist_7='/Users/o_o/Experiment/spike/twitter_people'

@@ -1,0 +1,85 @@
+" -----------------------------------------------------------------------------  
+" |                            VIM Settings                                   |
+" |                              GUI stuff                                    |
+" -----------------------------------------------------------------------------  
+
+
+function! RunCuke(args)
+ let clean = ":! rm -f cuke.out .cuke.out.swp"
+ execute clean
+ let path = "cucumber"
+ let cmd = ":! " . path .' ' . a:args."> cuke.out 2>&1 "
+ execute "echo '...Running Cuke'"
+ execute cmd 
+ let view = ":sp cuke.out"
+ execute view
+endfunction
+" Mappings
+" run one rspec example or describe block based on cursor position
+map !c :call RunCuke("%:".<C-r>=line('.')<CR>.' ')
+" run full rspec file
+map !C :call RunCuke("%")
+
+" Execute open rspec buffer
+" Thanks to Ian Smith-Heisters for original
+function! RunSpec(args)
+ let clean = ":! rm -f rspec.out .rspec.out.swp"
+ execute clean
+ let path = "rspec"
+ let cmd = ":! " . path .' ' . a:args." -f n > rspec.out 2>&1"
+ execute "echo '...Running RSPEC'"
+ execute cmd 
+ let clear_open = ":bdelete rspec.out"
+ execute clear_open
+ let view = ":sp rspec.out"
+ execute view
+endfunction
+" Mappings
+" run one rspec example or describe block based on cursor position
+map !s :call RunSpec("%:".<C-r>=line('.')<CR>.' ')
+" run full rspec file
+map !S :call RunSpec("%")
+
+" OS Specific *****************************************************************
+if has("gui_macvim")
+
+  set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
+  set guifont=Monaco:h13
+  set guioptions-=T  " remove toolbar
+  set stal=2 " turn on tabs by default
+
+elseif has("gui_gtk2")
+
+  set guifont=Monaco
+  set guioptions-=T  " remove toolbar
+
+elseif has("x11")
+elseif has("gui_win32")
+end
+
+" General *********************************************************************
+set anti " Antialias font
+
+"set transparency=0
+
+" Default size of window
+set columns=179 
+set lines=50
+
+" Tab headings 
+set gtl=%t gtt=%F
+
+filetype plugin indent on
+syntax on
+
+set smartindent
+set tabstop=2
+set shiftwidth=2
+map <F2> :previous <CR>
+map <F3> :next <CR>
+
+
+set number
+colorscheme desert
+source ~/vim/vimrc
+

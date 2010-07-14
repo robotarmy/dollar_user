@@ -1,0 +1,1 @@
+/Users/o_o/vim/git/vim-haml/ftplugin/haml.vim
