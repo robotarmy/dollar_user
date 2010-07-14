@@ -1,1 +1,1 @@
-git/vim-rails/plugin/rails.vim
+/Users/o_o/vim/git/vim-rails/plugin/rails.vim
