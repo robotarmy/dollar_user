@@ -6,7 +6,7 @@ def die(msg)
 end
 current_dir = pwd()
 vim_install = "~/vim/"
-vim_dir = ARGV.shift or die("vim addon container dir required")
+vim_dir = ARGV.shift or die("The argument is the directory that is the addon - ie vim-cucumber")
 files = []
 Dir["#{vim_dir}/*"].each do|add_on|
   if File.directory?(add_on)
