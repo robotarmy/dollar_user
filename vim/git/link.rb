@@ -1,3 +1,4 @@
+#/usr/bin/env ruby
 require 'FileUtils'
 include FileUtils
 def die(msg)
