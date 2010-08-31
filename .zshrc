@@ -10,6 +10,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="clean"
 
+
+ulimit -c unlimited #core dumps please
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 

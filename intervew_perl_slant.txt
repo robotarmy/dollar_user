@@ -1,0 +1,15 @@
+Please answer the following Questions:
+
+1) what does 'use strict' do ?
+2) what is the difference between '||' and 'or'
+3) what is the output of
+echo '"hello" =~ m/(\w)/; print "$1"; print 5/2; print 5%2;' | perl
+4) what is the difference between an interpreter a compiler and a virtual machine?
+5) what is {n,m}?
+6) what is cpan?
+7) what is perl -w for ? How can you turn this on in a file?
+8) what is your favorite color?
+9) what is your quest?
+
+--- 
+Interview Quiz (Perl Slant) Copyright © 2010 Curtis Schofield. All Rights Reserved.
