@@ -7,7 +7,6 @@
    map <D-r> <Plug>PeepOpen
  end
 
-
 function! RunCuke(args)
  let clean = ":! rm -f cuke.out .cuke.out.swp"
  execute clean
@@ -48,7 +47,8 @@ map !S :call RunSpec("%")
 if has("gui_macvim")
 
   set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
-  set guifont=Monaco:h13
+  set guifont=Anonymous\ Pro\ Bold:h18
+
   set guioptions-=T  " remove toolbar
   set stal=2 " turn on tabs by default
 

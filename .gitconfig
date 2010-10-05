@@ -4,3 +4,7 @@
 	email = github.com@robotarmyma.de
 [github]
 	user = robotarmy
+[color]
+	diff = auto
+	status = auto
+	branch = auto

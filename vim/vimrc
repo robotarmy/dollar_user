@@ -24,7 +24,7 @@
 " |                                                                           |
 " | Put machine/user specific settings in ~/.vimrc.local                      |
 " -----------------------------------------------------------------------------  
-
+match ErrorMsg '\%>80v.+'
 
 set nocompatible
 
