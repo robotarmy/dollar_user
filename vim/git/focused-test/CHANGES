@@ -1,0 +1,13 @@
+0.4.0
+Can now handle shoulda tests/focused tests. (Patch by Neal Clark)
+Run a focused should by specifying a line anywhere inside of the should. (Patch by Neal Clark)
+Run a focused context by specifying the line on which the context starts. (Patch by Neal Clark)
+
+0.2.0
+FocusedTest.run and FocusedTest.new now take a splatted array.
+
+0.1.1
+FocusedTest#parse properly uses args local variable instead of using ARGV.
+
+0.1.0
+Initial Release

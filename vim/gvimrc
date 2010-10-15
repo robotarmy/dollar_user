@@ -7,31 +7,16 @@
    map <D-r> <Plug>PeepOpen
  end
 
-function! RunCuke(args)
- let clean = ":! rm -f cuke.out .cuke.out.swp"
- execute clean
- let path = "cucumber"
- let cmd = ":! " . path .' ' . a:args."> cuke.out 2>&1 "
- execute "echo '...Running Cuke'"
- execute cmd 
- let view = ":sp cuke.out"
- execute view
-endfunction
-" Mappings
-" run one rspec example or describe block based on cursor position
-map !c :call RunCuke("%:".<C-r>=line('.')<CR>.' ')
-" run full rspec file
-map !C :call RunCuke("%")
-
 " Execute open rspec buffer
 " Thanks to Ian Smith-Heisters for original
 function! RunSpec(args)
  let clean = ":! rm -f rspec.out .rspec.out.swp"
  execute clean
- let path = "rspec"
- let cmd = ":! " . path .' ' . a:args." -f n > rspec.out 2>&1"
+ let path = "$rvm_ruby_interpreter /Users/o_o/vim/git/focused-test/bin/focused-test"
+
+ let cmd = ":! " . path .' ' . a:args." --format progress  > rspec.out 2>&1"
  execute "echo '...Running RSPEC'"
- execute cmd 
+ execute cmd
  let clear_open = ":bdelete rspec.out"
  execute clear_open
  let view = ":sp rspec.out"
@@ -39,9 +24,9 @@ function! RunSpec(args)
 endfunction
 " Mappings
 " run one rspec example or describe block based on cursor position
-map !s :call RunSpec("%:".<C-r>=line('.')<CR>.' ')
+map !s :call RunSpec("-f % -l ".<C-r>=line('.')<CR>.' ')
 " run full rspec file
-map !S :call RunSpec("%")
+map !S :call RunSpec("-f %")
 
 " OS Specific *****************************************************************
 if has("gui_macvim")
