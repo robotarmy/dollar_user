@@ -97,6 +97,7 @@ colorscheme desert
 " Status Line *****************************************************************
 set statusline=
 set statusline=%{fugitive#statusline()}
+set statusline+=%{rvm#statusline()}
 set statusline+=%=%f\ %(([%l/%L],%c)%)\            " line and column
 set statusline+=%{Fenc()}
 function! Fenc()
