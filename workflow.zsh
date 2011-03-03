@@ -15,6 +15,8 @@ function git {
   esac
 }
 
+alias rm='rm -i'
+
 # Sensitive Material Crowdcast
 # For my eyes only
 if [ -f "$HOME/crowdcast.zsh" ];then
