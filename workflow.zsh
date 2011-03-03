@@ -14,3 +14,10 @@ function git {
         ;;
   esac
 }
+
+# Sensitive Material Crowdcast
+# For my eyes only
+if [ -f "$HOME/crowdcast.zsh" ];then
+  source $HOME/crowdcast.zsh
+fi
+
