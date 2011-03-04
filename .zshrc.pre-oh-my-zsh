@@ -1,1 +1,0 @@
-  if [[ -s /Users/o_o/.rvm/scripts/rvm ]] ; then source /Users/o_o/.rvm/scripts/rvm ; fi
