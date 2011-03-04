@@ -1,0 +1,27 @@
+let mapleader=','
+let g:molokai_bright_comment=1
+
+" Execute open rspec buffer
+" " Thanks to Ian Smith-Heisters for original
+function! RunSpec(args)
+  let clean = ":! rm -f rspec.out .rspec.out.swp"
+  execute clean
+  execute ':! env >> rspec.out'
+  execute ':! which rspec >> rspec.out'
+  execute ':! rvm info >> rspec.out'
+  let path = "./bin/rspec"
+  let cmd = ":! " . path ." ". a:args." --no-color --format progress  >> rspec.out 2>&1"
+  execute "echo '...Running RSPEC'"
+  execute cmd
+  let clear_open = ":bdelete rspec.out"
+  execute clear_open
+  let view = ":sp rspec.out"
+  execute view
+endfunction
+" Mappings
+" run one rspec example or describe block based on cursor position
+"map !s :call RunSpec("% -l ".<C-r>=line('.')<CR>.' ')
+map !s :call RunRubyFocusedUnitTest
+map !S :call RunAllRubyTests
+" run full rspec file
+"map !S :call RunSpec(" %")
