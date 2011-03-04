@@ -17,17 +17,16 @@ function git {
 }
 
 if [ -n "$PS1" ] ; then
-rm () 
-{ 
-  ls -FCsd "$@"
-  echo 'remove[ny]? ' | tr -d '\012' ; read
-  if [ "_$REPLY" = "_y" ]; then
-    /bin/rm -rf "$@"
-  else
-    echo '(cancelled)'
-  fi
-}
-                                                            fi
+  function rm  { 
+    ls -FCsd "$@"
+    echo 'remove[ny]? ' | tr -d '\012' ; read
+    if [ "_$REPLY" = "_y" ]; then
+      /bin/rm -rf "$@"
+    else
+      echo '(cancelled)'
+    fi
+  }
+fi
 
 # Sensitive Material Crowdcast
 # For my eyes only
@@ -35,12 +34,16 @@ if [ -f "$HOME/crowdcast.zsh" ];then
   source $HOME/crowdcast.zsh
 fi
 
-function start_mongo_rs() {
-  mongod --replSet hvf --port $1 --dbpath ./$2 --quiet &
+function start_mongo_rs {
+  mongod --replSet hvf --port $1 --dbpath $2 --quiet
 }
 
-function start_mongo() {
-  mongod --port $1 --dbpath ./$2 --quiet &
+function start_mongo {
+  mongod --port $1 --dbpath $2 
+}
+
+function logstew_mongo {
+  start_mongo 27017 $HOME/Hack/logstew/mongo
 }
 
 function bu {
@@ -49,6 +52,14 @@ function bu {
 
 function be {
   bundle exec $*
+}
+
+function gitwh {
+  git whatchanged
+}
+
+function gitst {
+  git status
 }
 
 function gits {
