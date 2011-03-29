@@ -1,7 +1,14 @@
 GIT=/usr/local/bin/git
 
+alias cat='cat -n'
 function git {
   case $1 in
+    statsu)
+        $GIT status
+        ;;
+    stauts)
+        $GIT status
+        ;;
     commit)
         echo ">Git Commit" $*
         $GIT $*
@@ -16,10 +23,11 @@ function git {
   esac
 }
 
+# from wikipedia unix rm page
 if [ -n "$PS1" ] ; then
   function rm  { 
     ls -FCsd "$@"
-    echo 'remove[ny]? ' | tr -d '\012' ; read
+    echo 'Remove [ny]? ' | tr -d '\012' ; read
     if [ "_$REPLY" = "_y" ]; then
       /bin/rm -rf "$@"
     else
@@ -33,13 +41,20 @@ fi
 if [ -f "$HOME/crowdcast.zsh" ];then
   source $HOME/crowdcast.zsh
 fi
+function crsconsole {
+heroku console --app captainrecruiter-staging   
+
+}
+function crslogtail {
+heroku logs --tail --app captainrecruiter-staging   
+}
 
 function start_mongo_rs {
-  mongod --replSet hvf --port $1 --dbpath $2 --quiet
+  mongod --replSet hvf --port $1 --dbpath $2 --quiet 
 }
 
 function start_mongo {
-  mongod --port $1 --dbpath $2 
+  mongod --port $1 --dbpath $2 --rest
 }
 
 function logstew_mongo {
@@ -52,6 +67,10 @@ function bu {
 
 function be {
   bundle exec $*
+}
+
+function hammer_time {
+  git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
 }
 
 function gitwh {
@@ -67,10 +86,10 @@ function gits {
 }
 
 function ccblank {
- ssh -AY o_o@ec2-50-18-18-192.us-west-1.compute.amazonaws.com
+ ssh -AY o_o@onpremload.crowdcast.com
 }
 
 function ccblankroot {
- ssh -AY -i ~/.ssh/arun_aws_key.pem root@ec2-50-18-18-192.us-west-1.compute.amazonaws.com
+ ssh -AY -i ~/.ssh/arun_aws_key.pem root@onpremload.crowdcast.com
 }
 
