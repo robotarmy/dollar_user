@@ -86,10 +86,10 @@ function gits {
 }
 
 function ccblank {
- ssh -AY o_o@onpremload.crowdcast.com
+ ssh -AY o_o@blankslate.crowdcast.com
 }
 
 function ccblankroot {
- ssh -AY -i ~/.ssh/arun_aws_key.pem root@onpremload.crowdcast.com
+ ssh -AY -i ~/.ssh/arun_aws_key.pem root@blankslate.crowdcast.com
 }
 
