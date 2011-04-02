@@ -1,3 +1,7 @@
+if has("gui_running")
+  set guifont=NuSansMono:h11
+end
+
 let mapleader=','
 let g:molokai_bright_comment=1
 
