@@ -1,5 +1,8 @@
 GIT=/usr/local/bin/git
 
+function crashplan_md1 {
+ ssh -L 4200:localhost:4243 md1.ram9.cc
+}
 alias cat='cat -n'
 function git {
   case $1 in
