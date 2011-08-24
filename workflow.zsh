@@ -1,27 +1,35 @@
-GIT=/usr/local/bin/git
 
 function crashplan_md1 {
  ssh -L 4200:localhost:4243 md1.ram9.cc
 }
+
+
+
+
 alias cat='cat -n'
 function git {
   case $1 in
+    status)
+        pair_email=$(git pair | grep 'Current email' | sed 's/[ ]*Current email: //')
+        printf "\npair: $pair_email\n\n"
+        command git status
+        ;;
     statsu)
-        $GIT status
+        command git status
         ;;
     stauts)
-        $GIT status
+        command git status
         ;;
     commit)
         echo ">Git Commit" $*
-        $GIT $*
+        command git $*
         vbranch=`git branch | grep '*' | awk '{print $2}'`
         echo ">Commiting to remote" $vbranch
-        $GIT fetch origin $vbranch
-        $GIT push origin $vbranch
+        command git fetch origin $vbranch
+        command git push origin $vbranch
         ;;
     *)
-        $GIT $*
+        command git $*
         ;;
   esac
 }
