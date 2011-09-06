@@ -33,7 +33,7 @@ export DEVKITPRO=$HOME/Hack/devkitpro
 export DEVKITARM=$DEVKITPRO/devkitARM
 export DEVKITPSP=$DEVKITPRO/devkitPSP
 
-source ~/workflow.zsh
+source ~/dollar_user/workflow.zsh
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin:~/Script/:/usr/local/share/npm/bin:/usr/local/lib/luarocks/bin:$DEVKITARM/bin:$HOME/opt/bin
 
