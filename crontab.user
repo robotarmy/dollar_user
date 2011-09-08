@@ -1,5 +1,0 @@
-*/11 * * * * bash -l -c 'rsync -aRuP --partial-dir=PARTIAL ~/Work ~/Dropbox/RSYNC ; '
-*/22 * * * * bash -l -c 'rsync -aRuP --partial-dir=PARTIAL ~/Hack ~/Dropbox/RSYNC ; '
-*/33 * * * * bash -l -c 'rsync -aRuP --partial-dir=PARTIAL ~/Experiment ~/Dropbox/RSYNC ; '
-*/44 * * * * bash -l -c 'rsync -aRuP --partial-dir=PARTIAL ~/Class ~/Dropbox/RSYNC ; '
-*/55 * * * * bash -l -c 'rsync -aRuP --partial-dir=PARTIAL ~/Pictures ~/Dropbox/RSYNC ; '
