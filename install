@@ -8,4 +8,4 @@ mkdir -p ~/Script
 set -o noclobber
 cp $here/Script/* ~/Script
 cd $here/jan
-sh bootstrap.sh
+sh bootstrap
