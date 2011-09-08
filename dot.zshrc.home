@@ -1,5 +1,4 @@
 export EDITOR="/usr/bin/vim"
-export VISUAL="/usr/local/bin/mvim -f"
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
@@ -7,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="clean"
 #zshrc
-plugins=(vi-mode git)
+plugins=(vi-mode git history-substring-search )
 
 ulimit -c unlimited #core dumps please
 # Set to this to use case-sensitive completion
@@ -31,11 +30,10 @@ source $ZSH/oh-my-zsh.sh
 
 export DEVKITPRO=$HOME/Hack/devkitpro
 export DEVKITARM=$DEVKITPRO/devkitARM
-export DEVKITPSP=$DEVKITPRO/devkitPSP
 
-source ~/dollar_user/workflow.zsh
+source ~/.workflow.zsh
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin:~/Script/:/usr/local/share/npm/bin:/usr/local/lib/luarocks/bin:$DEVKITARM/bin:$HOME/opt/bin
+export PATH=~/Script/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin:~/Script/:/usr/local/share/npm/bin:/usr/local/lib/luarocks/bin:$DEVKITARM/bin:$HOME/opt/bin
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
