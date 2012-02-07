@@ -1,11 +1,11 @@
 here=`pwd`
 cd ~/
 ln -s $here/oh-my-zsh ~/.oh-my-zsh
-ln -s $here/vimrc.local ~/.vimrc.local
+ln -s $here/vimrc.before ~/.vimrc.before
 ln -s $here/dot.zshrc.home ~/.zshrc
 ln -s $here/workflow.zsh  ~/.workflow.zsh
 mkdir -p ~/Script
 set -o noclobber
 cp $here/Script/* ~/Script
-cd $here/jan
-sh bootstrap
+cd $here/janus
+sh bootstrap.sh
