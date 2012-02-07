@@ -3,7 +3,16 @@ if has("gui_running")
 end
 
 let mapleader=','
-let g:molokai_bright_comment=1
+
+
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+
+let g:solarized_contrast='high'
+colorscheme solarized
 
 " Execute open rspec buffer
 " " Thanks to Ian Smith-Heisters for original
