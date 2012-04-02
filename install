@@ -3,6 +3,7 @@ mkdir -p $here/dot_janus
 git submodule update
 cd ~/
 ln -s $here/oh-my-zsh ~/.oh-my-zsh
+ln -s $here/vimrc.after ~/.vimrc.after
 ln -s $here/vimrc.before ~/.vimrc.before
 ln -s $here/dot.zshrc.home ~/.zshrc
 ln -s $here/workflow.zsh  ~/.workflow.zsh
