@@ -1,8 +1,9 @@
 if has('gui_running')
-  set background=light
+  set background=dark
 else
   set background=dark
 endif
 
 let g:solarized_contrast='high'
+colorscheme solarized
 colorscheme solarized_contrast
