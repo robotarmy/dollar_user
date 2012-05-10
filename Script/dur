@@ -18,7 +18,7 @@ if ARGV.first.nil?
 end
 mimetype = ARGV.first
 puts "Dur! Dur! Dur Happy about mime type #{mimetype}"
-template = "url(data:__MIMETYPE__;base64,__DATA__)"
+template = "url(data:__MIMETYPE__;charset=utf8;base64,__DATA__)"
 data = File.read(file)
 require 'base64'
 encoded_data  = Base64.strict_encode64(data) # no line feeds if strict
