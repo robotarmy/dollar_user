@@ -33,7 +33,9 @@ export DEVKITARM=$DEVKITPRO/devkitARM
 
 source ~/.workflow.zsh
 # Customize to your needs...
-export PATH=~/Script/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin:~/Script/:/usr/local/share/npm/bin:/usr/local/lib/luarocks/bin:$DEVKITARM/bin:$HOME/opt/bin
+export PATH=$PATH:~/Script/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin:~/Script/:/usr/local/share/npm/bin:/usr/local/lib/luarocks/bin:$DEVKITARM/bin:$HOME/opt/bin
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

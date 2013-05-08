@@ -6,4 +6,4 @@ endif
 
 let g:solarized_contrast='high'
 colorscheme solarized
-colorscheme solarized_contrast
+"colorscheme solarized_contrast
