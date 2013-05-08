@@ -1,6 +1,6 @@
 here=`pwd`
 mkdir -p $here/dot_janus
-git submodule update
+git submodule update --init
 cd ~/
 ln -s $here/oh-my-zsh ~/.oh-my-zsh
 ln -s $here/vimrc.after ~/.vimrc.after
