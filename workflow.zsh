@@ -1,3 +1,4 @@
+export EDITOR='mvim'
 
 function crashplan_md1 {
  ssh -L 4200:localhost:4243 md1.ram9.cc
@@ -5,13 +6,47 @@ function crashplan_md1 {
 
 
 
+alias zshedit="vim ~/.zshrc"
+alias workflowedit="vim ~/.workflow.zsh"
+alias zshconf="vim ~/.zshrc"
+alias zshreload="source ~/.zshrc"
 
-alias cat='cat -n'
+alias st='\git status -s'
+alias add='\git add'
+
+alias cat='\cat -n'
+
+function be {
+  command bundle exec $*
+}
+
+
+function bu {
+  command  bundle update $*
+}
+
+function plog {
+  command git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+}
+
+function whatchanged {
+  command git whatchanged
+}
+
+function gitst {
+  command git status
+}
+
+function gits {
+  command git status
+}
+
 function git {
   case $1 in
+    st)
+      command git status
+      ;;
     status)
-        pair_email=$(git pair | grep 'Current email' | sed 's/[ ]*Current email: //')
-        printf "\npair: $pair_email\n\n"
         command git status
         ;;
     statsu)
@@ -36,29 +71,23 @@ function git {
 
 # from wikipedia unix rm page
 if [ -n "$PS1" ] ; then
-  function rm  { 
-    ls -FCsd "$@"
-    echo 'Remove [ny]? ' | tr -d '\012' ; read
-    if [ "_$REPLY" = "_y" ]; then
-      /bin/rm -rf "$@"
-    else
-      echo '(cancelled)'
-    fi
-  }
+#  function rm  { 
+#    ls -FCsd "$@"
+#    echo 'Remove [ny]? ' | tr -d '\012' ; read
+#    if [ "_$REPLY" = "_y" ]; then
+#      /bin/rm -rf "$@"
+#    else
+#      echo '(cancelled)'
+#    fi
+#  }
 fi
 
-# Sensitive Material Crowdcast
+# Project specific
 # For my eyes only
-if [ -f "$HOME/crowdcast.zsh" ];then
-  source $HOME/crowdcast.zsh
-fi
-function crsconsole {
-heroku console --app captainrecruiter-staging   
 
-}
-function crslogtail {
-heroku logs --tail --app captainrecruiter-staging   
-}
+if [ -f "$HOME/.dio.zsh" ]; then
+  source $HOME/.dio.zsh
+fi
 
 function start_mongo_rs {
   mongod --replSet hvf --port $1 --dbpath $2 --quiet 
@@ -70,30 +99,6 @@ function start_mongo {
 
 function logstew_mongo {
   start_mongo 27017 $HOME/Hack/logstew/mongo
-}
-
-function bu {
-  bundle update $*
-}
-
-function be {
-  bundle exec $*
-}
-
-function hammer_time {
-  git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-}
-
-function gitwh {
-  git whatchanged
-}
-
-function gitst {
-  git status
-}
-
-function gits {
-  git status
 }
 
 function ccblank {
