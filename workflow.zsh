@@ -1,5 +1,5 @@
 export EDITOR='mvim'
-
+export GOPATH=~/dev/go
 function crashplan_md1 {
  ssh -L 4200:localhost:4243 md1.ram9.cc
 }
@@ -13,8 +13,17 @@ alias zshreload="source ~/.zshrc"
 
 alias st='\git status -s'
 alias add='\git add'
-
+alias tree='command ls -lash'
 alias cat='\cat -n'
+alias swbt='tmuxinator start secret-weapon-base'
+
+function pidofport() {
+  command lsof -i:$1 -t
+}
+
+function appofport() {
+  command ps aux | command grep `pidofport $1`
+}
 
 function be {
   command bundle exec $*
@@ -59,9 +68,14 @@ function git {
         echo ">Git Commit" $*
         command git $*
         vbranch=`git branch | grep '*' | awk '{print $2}'`
-        echo ">Commiting to remote" $vbranch
-        command git fetch origin $vbranch
-        command git push origin $vbranch
+        echo ">Attempting to merge into -> origin $vbranch"
+        command git pull origin $vbranch
+        if [ $? -eq 0 ] ; then
+          echo ">Commiting to remote -> origin $vbranch"
+          command git push origin $vbranch
+        else 
+          echo ">ERROR REMOTE NOT COMMITED : $?"
+        fi
         ;;
     *)
         command git $*
@@ -108,4 +122,5 @@ function ccblank {
 function ccblankroot {
  ssh -AY -i ~/.ssh/arun_aws_key.pem root@blankslate.crowdcast.com
 }
+
 
