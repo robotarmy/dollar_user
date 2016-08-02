@@ -1,5 +1,14 @@
-export EDITOR='mvim'
+ulimit -u unlimited
+ulimit -n unlimited
+
+
+# blocksworld
+export BW_UNITY_APP=/Applications/Unity/Unity.app
+
+
+export EDITOR='emacs'
 export GOPATH=~/dev/go
+export PATH=$PATH:$GOPATH/bin
 function crashplan_md1 {
  ssh -L 4200:localhost:4243 md1.ram9.cc
 }

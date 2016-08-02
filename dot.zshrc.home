@@ -30,21 +30,26 @@ source $ZSH/oh-my-zsh.sh
 
 export DEVKITPRO=$HOME/Hack/devkitpro
 export DEVKITARM=$DEVKITPRO/devkitARM
-
+#echo "workflow"
 source ~/.workflow.zsh
-# Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:~/Script/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin:~/Script/:/usr/local/share/npm/bin:/usr/local/lib/luarocks/bin:$DEVKITARM/bin:$HOME/opt/bin
 
+#echo "path"
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:~/Script/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin:~/Script/:/usr/local/share/npm/bin:/usr/local/lib/luarocks/bin:$DEVKITARM/bin:$HOME/opt/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # rbenv install
 #
 #
+#echo "rbenv"
 eval "$(rbenv init - zsh)"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# NVM install
+#echo "nvm"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+export RBENV_VERSION=2.1.5 # use this for blocksworld until i can figure out why 2.2.2 is failing
+
+# docker-machine
+# Run this command to configure your shell:
+# eval "$(docker-machine env default)"
